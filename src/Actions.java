@@ -28,21 +28,13 @@ public class Actions extends Data {
         }
         // mix the numbers
         Collections.shuffle(numbers);
-        System.out.println("Zufallszahl" + numbers);
+        System.out.println("    Zufallszahl: " + numbers);
         return numbers;
     }
-    // test
+
     public void buchstabenNehmen(int i) {
         String s = "";
-        zufallsZahlen(i);
-        for(int z = 0; z < temp.length; z++){
-            if(temp[z] == s){
-                buchstabenNehmen(i);
-                // I have to handle the case where temp[z] != s
-            }else{
-                break;
-            }
-        }
+
         for (int k = 0; k < numbers.size(); k++){
             s = String.valueOf(getAntworten()[i].charAt(numbers.get(k)));
             temp[numbers.get(k)] = s;
