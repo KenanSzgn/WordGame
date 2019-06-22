@@ -5,7 +5,7 @@
  * Erstellungsdatum:		14.06.2019
  * Autor:   				Kenan Sezgin
  **/
-public class Data {
+public class Data { //test
     private String[] fragen = new String[14];
     private String[] antworten = new String[14];
 

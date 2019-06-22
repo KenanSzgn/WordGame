@@ -14,7 +14,7 @@ public class ActionsTest {
         Actions ob1 = new Actions(fragen, antworten);
         Scanner in = new Scanner(System.in);
 
-        int i = 0;
+        int i = 0; //test
         boolean gameIsPlaying = true;
         while (gameIsPlaying){
             System.out.println(ob1.getFragen()[i]);

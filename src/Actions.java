@@ -31,7 +31,7 @@ public class Actions extends Data {
         System.out.println("Zufallszahl" + numbers);
         return numbers;
     }
-
+    // test
     public void buchstabenNehmen(int i) {
         String s = "";
         zufallsZahlen(i);
