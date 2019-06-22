@@ -1,6 +1,6 @@
 import java.util.*;
 import java.util.Collections;
-
+// das ist komplett neu
 /**
  * Projektname:            Wordgame
  * Programmname:
