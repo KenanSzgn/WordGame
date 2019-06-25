@@ -1,6 +1,7 @@
 import java.util.*;
 import java.util.Collections;
 // das ist komplett neu
+
 /**
  * Projektname:            Wordgame
  * Programmname:
@@ -31,30 +32,30 @@ public class Actions extends Data {
         System.out.println("    Zufallszahl: " + numbers);
         return numbers;
     }
-
-    public void buchstabenNehmen(int i) {
+    public void buchstabenNehmen(int i, int k) {
         String s = "";
-
-        for (int k = 0; k < numbers.size(); k++){
-            s = String.valueOf(getAntworten()[i].charAt(numbers.get(k)));
-            temp[numbers.get(k)] = s;
-            break;
-        }
+        s = String.valueOf(getAntworten()[i].charAt(numbers.get(k)));
+        temp[numbers.get(k)] = s;
         for (int j = 0; j < temp.length; j++) {
             // print tempArray
             System.out.print(temp[j] + "|");
         }
     }
 
-    public void aufloesen(int i) {
+    public boolean aufloesen(int i) {
         System.out.println("Geben Sie die Antwort ein.");
         String antwort = in.next();
-
         if (antwort.equals(getAntworten()[i])) {
             System.out.println("Die Lï¿½sung ist korrekt: " + getAntworten()[i]);
+            return true;
         } else {
             System.out.println("Die Lï¿½sung ist falsch. Versuchen Sie es erneut.");
+            return false;
         }
+    }
+
+    public void punkte(){
+
     }
 }
 
