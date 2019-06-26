@@ -12,17 +12,18 @@ import java.util.Collections;
 public class Actions extends Data {
     ArrayList<Integer> numbers = new ArrayList<Integer>();
     Scanner in = new Scanner(System.in);
+    int points = 0;
     int i;
     int[] randomNumbers = new int[getAntworten()[i].length()];
     // Nehme die gleiche Länge für das temporäre Array wie das AntwortArray
+    // Constructor
     String[] temp = new String[getAntworten()[i].length()];
 
-    // Constructor
     public Actions(String[] fragen, String[] antworten) {
         super(fragen, antworten);
     }
-
     // create a random number
+
     public ArrayList<Integer> zufallsZahlen(int i) {
         for (int k = 0; k < getAntworten()[i].length(); k++) {
             numbers.add(k);
@@ -32,6 +33,7 @@ public class Actions extends Data {
         System.out.println("    Zufallszahl: " + numbers);
         return numbers;
     }
+
     public void buchstabenNehmen(int i, int k) {
         String s = "";
         s = String.valueOf(getAntworten()[i].charAt(numbers.get(k)));
@@ -46,16 +48,18 @@ public class Actions extends Data {
         System.out.println("Geben Sie die Antwort ein.");
         String antwort = in.next();
         if (antwort.equals(getAntworten()[i])) {
-            System.out.println("Die Lï¿½sung ist korrekt: " + getAntworten()[i]);
+            System.out.println("Die Lösung ist korrekt: " + getAntworten()[i]);
             return true;
         } else {
-            System.out.println("Die Lï¿½sung ist falsch. Versuchen Sie es erneut.");
+            System.out.println("Die Lösung ist falsch. Versuchen Sie es erneut.");
             return false;
         }
     }
 
-    public void punkte(){
-
+    public void punkte(int k){
+        // points: points equel to the length of the word multiplied with 100 and than minus the characters
+        // you taked as a hint
+        points = (getAntworten()[i].length() * 100) -(k *(100));
     }
 }
 

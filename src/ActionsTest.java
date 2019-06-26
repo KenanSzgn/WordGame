@@ -17,21 +17,32 @@ public class ActionsTest {
 
         int i = 0; // to iterate trough the wordlist "anworten"
         int k = 0; // to iterate trough the characters in a word
-        boolean gameIsPlaying = true;
-
-        ob1.zufallsZahlen(i);
-        while (gameIsPlaying){
+        boolean questionIsSame = true;
+        // if i < 15 than get to the next question
+        while (i < 15) {
+            ob1.zufallsZahlen(i);
             System.out.println(ob1.getFragen()[i]);
-            String entscheidung;
-            System.out.println("\nGeben Sie b für einen neuen Buchstaben ein oder l wenn Sie auflösen möchten.");
-            entscheidung = in.nextLine();
-            if (entscheidung.equals("b")) {
-                ob1.buchstabenNehmen(i, k);
-                k++;
-            } else if (entscheidung.equals("l")) {
-                ob1.aufloesen(i);
+            questionIsSame = true;
+            while (questionIsSame) {
+                String entscheidung;
+                System.out.println("\nGeben Sie b für einen neuen Buchstaben ein oder l wenn Sie auflösen möchten.");
+                entscheidung = in.nextLine();
+                if (entscheidung.equals("b")) {
+                    ob1.buchstabenNehmen(i, k);
+                    k++;
+                    ob1.punkte(k);
+
+                } else if (entscheidung.equals("l")) {
+                    ob1.aufloesen(i);
+                    System.out.println("punkte = " + ob1.points);
+                    questionIsSame = false;
+                    // clear the temp array for the new hints
+                    for(int b = 0; b < ob1.temp.length; b++){
+                        ob1.temp[b] = " ";
+                    }
+                }
             }
+            i++;
         }
-        i++;
     }
 }
