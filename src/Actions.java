@@ -1,6 +1,5 @@
 import java.util.*;
 import java.util.Collections;
-// das ist komplett neu
 
 /**
  * Projektname:            Wordgame
@@ -14,16 +13,14 @@ public class Actions extends Data {
     Scanner in = new Scanner(System.in);
     int points = 0;
     int i;
-    int[] randomNumbers = new int[getAntworten()[i].length()];
-    // Nehme die gleiche Länge für das temporäre Array wie das AntwortArray
-    // Constructor
+    // take the same length for the temp Array like the answer array
     String[] temp = new String[getAntworten()[i].length()];
 
     public Actions(String[] fragen, String[] antworten) {
         super(fragen, antworten);
     }
-    // create a random number
 
+    // create a random number
     public ArrayList<Integer> zufallsZahlen(int i) {
         for (int k = 0; k < getAntworten()[i].length(); k++) {
             numbers.add(k);
@@ -35,8 +32,11 @@ public class Actions extends Data {
     }
 
     public void buchstabenNehmen(int i, int k) {
+        // take the character at the index from the number which you get from the first index
+        // of the numbers ArrayList and put it to "s"
         String s = "";
         s = String.valueOf(getAntworten()[i].charAt(numbers.get(k)));
+        // take the "s" and put it to the temp array at the same index from above
         temp[numbers.get(k)] = s;
         for (int j = 0; j < temp.length; j++) {
             // print tempArray

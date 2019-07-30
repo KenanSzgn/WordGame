@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -11,12 +12,12 @@ public class ActionsTest {
     public static void main(String[] args) {
         String[] fragen = new String[14];
         String[] antworten = new String[14];
+        ArrayList<Integer> numbers = new ArrayList<Integer>();
         Actions ob1 = new Actions(fragen, antworten);
         Scanner in = new Scanner(System.in);
-
-
         int i = 0; // to iterate trough the wordlist "anworten"
         int k = 0; // to iterate trough the characters in a word
+
         boolean questionIsSame = true;
         // if i < 15 than get to the next question
         while (i < 15) {
@@ -36,10 +37,14 @@ public class ActionsTest {
                     ob1.aufloesen(i);
                     System.out.println("punkte = " + ob1.points);
                     questionIsSame = false;
-                    // clear the temp array for the new hints
+                    // to clear the position of the index, set index 0
+                    k = 0;
+                    // overwrite the temp array whit space for the new hints
                     for(int b = 0; b < ob1.temp.length; b++){
                         ob1.temp[b] = " ";
                     }
+                    // clear the numbers arraylist for the new numbers
+                    ob1.numbers.clear();
                 }
             }
             i++;

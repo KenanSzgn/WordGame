@@ -17,30 +17,30 @@ public class Data { //test
         antworten[0] = "Silbe";
         fragen[1] = "angenehmer, feiner Geruch";
         antworten[1] = "Duft";
-        fragen[2] = "nach innen gewÃ¶lbt";
+        fragen[2] = "nach innen gewölbt";
         antworten[2] = "Konkav";
-        fragen[3] = " DÃ¼nner Mensch";
+        fragen[3] = " Dünner Mensch";
         antworten[3] = "Abgemagert";
-        fragen[4] = "pikante, dickflÃ¼ssige SoÃŸe zum WÃ¼rzen";
+        fragen[4] = "pikante, dickflüssige Sose zum Würzen";
         antworten[4] = "Ketchup";
-        fragen[5] = "mit freudiger Bereitwilligkeit, VergnÃ¼gen";
+        fragen[5] = "mit freudiger Bereitwilligkeit, Vergnügen";
         antworten[5] = "Gerne";
-        fragen[6] = "den Intellekt betreffend; verstandesmÃ¤ÃŸig, geistig";
+        fragen[6] = "den Intellekt betreffend; verstandesmäsig, geistig";
         antworten[6] = "Intellektuell";
         fragen[7] = " Person, die einen Mord begangen hat";
-        antworten[7] = "MÃ¶rder";
-        fragen[8] = "Ã¼ber das gewohnte MaÃŸ hinausgehend";
+        antworten[7] = "Mörder";
+        fragen[8] = "Aßber das gewohnte MaÃŸ hinausgehend";
         antworten[8] = "AuÃŸergewÃ¶hnlich";
         fragen[9] = "sich (in einer bestimmten Weise) verhalten, betragen";
         antworten[9] = "benehmen";
         fragen[10] = "philosophische Disziplin oder Lehre, die das hinter der sinnlich erfahrbaren, natÃ¼rlichen Welt Liegende, die letzten GrÃ¼nde und ZusammenhÃ¤nge des Seins behandelt";
         antworten[10] = "metaphysik";
         fragen[11] = "Einrichtungsgegenstand, mit dem ein Raum ausgestattet ist";
-        antworten[11] = "MÃ¶bel";
-        fragen[12] = "fÃ¼r ein Individuum spezifische, relativ konstante Weise des FÃ¼hlens, Erlebens, Handelns und Reagierens";
+        antworten[11] = "Möbel";
+        fragen[12] = "für ein Individuum spezifische, relativ konstante Weise des FÃ¼hlens, Erlebens, Handelns und Reagierens";
         antworten[12] = "Temperament";
         fragen[13] = " weder Lust noch Unlust empfindend oder erkennen lassend";
-        antworten[13] = "gleichgÃ¼ltig";
+        antworten[13] = "gleichgültig";
     }
 
     public String[] getFragen() {
